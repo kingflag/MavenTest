@@ -12,8 +12,8 @@
   <context:property-placeholder
     location="classpath:wangguoqiTest-core.properties" />
     
-  <!-- 自动扫描路径下面的包 -->  
-<!--   <context:component-scan base-package="com.hd123.h4.wangguoqiTest.controller" />
-  <context:component-scan base-package="com.hd123.h4.wangguoqiTest.service" /> -->
-  
+  <!-- 自动扫描路径下面的包 -->
+  <!-- <context:component-scan base-package="com.hd123.h4.wangguoqiTest.controller" /> -->
+  <!-- <context:component-scan base-package="com.hd123.h4.wangguoqiTest.service" /> -->
+  <context:component-scan base-package="com.hd123.h4.wangguoqiTest" />
 </beans>
