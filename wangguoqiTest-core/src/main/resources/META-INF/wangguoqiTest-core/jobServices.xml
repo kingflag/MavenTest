@@ -11,7 +11,9 @@
 
 	<bean id="wangguoqiTest-core.readJob" class="com.hd123.h4.wangguoqiTest.core.job.ReadJob" />
 	<bean id="wangguoqiTest-core.writeJob" class="com.hd123.h4.wangguoqiTest.core.job.WriteJob" />
-
+    
+    
+    
 	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="triggers">
 			<list>

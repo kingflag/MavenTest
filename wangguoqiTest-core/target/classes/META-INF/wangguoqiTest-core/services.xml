@@ -9,11 +9,6 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <!-- 请求的bean -->
-<!--   <bean id="writeJobcontroller"
-    class="com.hd123.h4.wangguoqiTest.controller.WriteJobControllerImpl">
-    <property name="WriteJobServiceImpl" ref="writeJobservice"></property>
-  </bean>
-  <bean id="writeJobservice" class="com.hd123.h4.wangguoqiTest.service.WriteJobServiceImpl"></bean>
- -->
+
+
 </beans>
