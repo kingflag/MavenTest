@@ -11,7 +11,7 @@ public class WriteJobServiceImpl implements WriteJobService {
   private WriteJobDao writeJobDaoImpl;  
   
   @Override
-  public String insert() {
+  public String insert() throws Exception {
     writeJobDaoImpl.insert();
     return "ServiceTestinsert";
   }
