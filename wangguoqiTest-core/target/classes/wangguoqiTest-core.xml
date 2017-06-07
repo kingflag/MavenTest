@@ -43,16 +43,16 @@
 
   <bean id="wangguoqiTest-core.readJob" class="com.hd123.h4.wangguoqiTest.core.job.ReadJob" />
   
-  <bean id="wangguoqiTest-core.writeJob" class="com.hd123.h4.wangguoqiTest.core.job.WriteJob">
-    <!-- <property name="WriteJobControllerImpl" ref="writeJobcontroller"></property> -->
-  </bean>
+  
+  
+  <bean id="wangguoqiTest-core.writeJob" class="com.hd123.h4.wangguoqiTest.core.job.WriteJob"></bean>
 
-
-<!-- 请求的bean -->
   <bean id="writeJobcontroller"
     class="com.hd123.h4.wangguoqiTest.controller.WriteJobControllerImpl"></bean>
     
   <bean id="writeJobservice" class="com.hd123.h4.wangguoqiTest.service.WriteJobServiceImpl"></bean>
+  
+  <bean id="writeJobdao" class = "com.hd123.h4.wangguoqiTest.dao.WriteJobDaoImpl"></bean>
 
 
 
