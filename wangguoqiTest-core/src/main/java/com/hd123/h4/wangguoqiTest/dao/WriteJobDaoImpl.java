@@ -18,7 +18,7 @@ public class WriteJobDaoImpl implements WriteJobDao {
   @Override
   public String insert() throws Exception  {
     System.out.println("daoc============+++++++");
-    String sql = "insert into hduserinfo values ('2', '7777','65.6','2017-06-21 11:02:59')";
+    String sql = "insert into hduserinfo values ('', '7777','65.6','2017-06-21 11:02:59')";
     System.out.println(sql);
     /*测试数据库连接信息*/
 //    DatabaseMetaData md = this.jdbcTemplate.getDataSource().getConnection().getMetaData();  
