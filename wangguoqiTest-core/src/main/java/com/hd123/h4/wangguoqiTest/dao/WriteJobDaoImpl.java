@@ -1,7 +1,6 @@
 package com.hd123.h4.wangguoqiTest.dao;
 
-import java.sql.DatabaseMetaData;
-import java.sql.SQLException;
+import java.util.Random;
 import java.util.UUID;
 
 import javax.sql.DataSource;
@@ -25,9 +24,14 @@ public class WriteJobDaoImpl implements WriteJobDao {
 //    System.out.println(md.getDatabaseProductName());  
 //    System.out.println(md.getDatabaseProductVersion()); 
     UUID uuid = UUID.randomUUID();
+    
+   
+    Random r = new Random();
+    float surplus = r.nextInt(12365);
     String sql = "insert into hduserinfo (user,surplus,createtime) values (uuid,'65.6','2017-06-21 11:02:59')";
     System.out.println(sql);
-    jdbcTemplate.update("insert into hduserinfo (user,surplus,createtime) values ('"+uuid+"','65.6','2017-06-21 11:02:59')");
+    int temp = jdbcTemplate.update("insert into hduserinfo (user,surplus,createtime) values ('"+uuid+"','"+surplus+"','2017-06-21 11:02:59')");
+    System.out.println("插入成功："+String.valueOf(temp));
     return null;
   }
 
