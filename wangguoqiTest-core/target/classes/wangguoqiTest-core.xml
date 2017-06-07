@@ -17,7 +17,7 @@
 
   <tx:annotation-driven transaction-manager="mcdts-core.transactionManager" />
 
-  <bean id="mcdts-core.dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+<!--   <bean id="mcdts-core.dataSource" class="org.apache.commons.dbcp.BasicDataSource"
     destroy-method="close">
     <property name="driverClassName"
       value="${mcdts-core.dataSource.driverClassName:oracle.jdbc.driver.OracleDriver}" />
@@ -30,29 +30,36 @@
     <property name="maxWait" value="${mcdts-core.dataSource.maxWait:-1}" />
     <property name="validationQuery"
       value="${mcdts-core.dataSource.validationQuery:select 1 from dual}" />
+  </bean> -->
+
+  <bean id="mytest.dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+    destroy-method="close">
+    <property name="url" value="jdbc:mysql://localhost:3306/test"></property>
+    <property name="username" value="root"></property>
+    <property name="password" value="root"></property>
+    <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
   </bean>
 
-  <bean id="mcdts-core.jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-    <property name="dataSource" ref="mcdts-core.dataSource" />
-  </bean>
 
-  <bean id="mcdts-core.transactionManager"
+<!--   <bean id="mcdts-core.transactionManager"
     class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-    <property name="dataSource" ref="mcdts-core.dataSource" />
-  </bean>
+    <property name="dataSource" ref="mytest.dataSource" />
+  </bean> -->
 
   <bean id="wangguoqiTest-core.readJob" class="com.hd123.h4.wangguoqiTest.core.job.ReadJob" />
-  
-  
-  
+
+
+
   <bean id="wangguoqiTest-core.writeJob" class="com.hd123.h4.wangguoqiTest.core.job.WriteJob"></bean>
 
   <bean id="writeJobcontroller"
     class="com.hd123.h4.wangguoqiTest.controller.WriteJobControllerImpl"></bean>
-    
+
   <bean id="writeJobservice" class="com.hd123.h4.wangguoqiTest.service.WriteJobServiceImpl"></bean>
-  
-  <bean id="writeJobdao" class = "com.hd123.h4.wangguoqiTest.dao.WriteJobDaoImpl"></bean>
+
+  <bean id="writeJobdao" class="com.hd123.h4.wangguoqiTest.dao.WriteJobDaoImpl">
+    <property name="dataSource" ref="mytest.dataSource" />
+  </bean>
 
 
 
