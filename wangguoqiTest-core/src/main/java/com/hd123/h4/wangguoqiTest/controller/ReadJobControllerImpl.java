@@ -8,6 +8,7 @@ import javax.ws.rs.Path;
 public class ReadJobControllerImpl implements IReadJobController {
 
   @Override
+  @Path("/selectall")
   public void selectall() {
     System.out.println("selectAll");
 
