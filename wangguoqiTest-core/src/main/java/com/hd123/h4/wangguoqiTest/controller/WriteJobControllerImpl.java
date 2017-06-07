@@ -15,7 +15,7 @@ public class WriteJobControllerImpl implements WriteJobController {
   private WriteJobService writeJobServiceImpl;
 
   @Override
-  public void insert() {
+  public void insert() throws Exception{
     System.out.println("插入过程");
     writeJobServiceImpl.insert();
   }

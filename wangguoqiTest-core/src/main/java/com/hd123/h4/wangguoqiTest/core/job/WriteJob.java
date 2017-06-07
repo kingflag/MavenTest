@@ -22,7 +22,7 @@ public class WriteJob implements ApplicationContextAware {
     this.appCtx = applicationContext;
   }
 
-  public void run() {
+  public void run() throws Exception {
     System.out.println("WriteJob");
     String beanName = "writeJobcontroller";
     if (appCtx.containsBean(beanName)) {
