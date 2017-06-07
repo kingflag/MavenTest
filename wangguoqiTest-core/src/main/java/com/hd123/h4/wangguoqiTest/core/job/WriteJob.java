@@ -16,7 +16,7 @@ public class WriteJob implements ApplicationContextAware {
 
   @Autowired
   private WriteJobController writeJobControllerImpl;
-  
+
   @Override
   public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
     this.appCtx = applicationContext;
@@ -28,16 +28,9 @@ public class WriteJob implements ApplicationContextAware {
     if (appCtx.containsBean(beanName)) {
       System.out.println("存在WriteJobcontroller");
       writeJobControllerImpl.insert();
-    }else {
+    } else {
       System.out.println("不存在此bean");
     }
   }
 
-//  public WriteJobController getWriteJobControllerImpl() {
-//    return writeJobControllerImpl;
-//  }
-//
-//  public void setWriteJobControllerImpl(WriteJobController writeJobControllerImpl) {
-//    this.writeJobControllerImpl = writeJobControllerImpl;
-//  }
 }
