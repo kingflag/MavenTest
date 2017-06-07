@@ -27,7 +27,7 @@ public class WriteJobDaoImpl implements WriteJobDao {
     UUID uuid = UUID.randomUUID();
     String sql = "insert into hduserinfo (user,surplus,createtime) values (uuid,'65.6','2017-06-21 11:02:59')";
     System.out.println(sql);
-    jdbcTemplate.update("insert into hduserinfo (user,surplus,createtime) values ("+uuid+",'65.6','2017-06-21 11:02:59')");
+    jdbcTemplate.update("insert into hduserinfo (user,surplus,createtime) values ('"+uuid+"','65.6','2017-06-21 11:02:59')");
     return null;
   }
 
