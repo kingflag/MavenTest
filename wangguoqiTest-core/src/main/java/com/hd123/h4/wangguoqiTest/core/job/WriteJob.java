@@ -3,6 +3,7 @@ package com.hd123.h4.wangguoqiTest.core.job;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
@@ -13,6 +14,7 @@ public class WriteJob implements ApplicationContextAware {
   protected static final Logger logger = LoggerFactory.getLogger(WriteJob.class);
   private ApplicationContext appCtx;
 
+  @Autowired
   private WriteJobController writeJobControllerImpl;
   
   @Override
@@ -31,11 +33,11 @@ public class WriteJob implements ApplicationContextAware {
     }
   }
 
-  public WriteJobController getWriteJobControllerImpl() {
-    return writeJobControllerImpl;
-  }
-
-  public void setWriteJobControllerImpl(WriteJobController writeJobControllerImpl) {
-    this.writeJobControllerImpl = writeJobControllerImpl;
-  }
+//  public WriteJobController getWriteJobControllerImpl() {
+//    return writeJobControllerImpl;
+//  }
+//
+//  public void setWriteJobControllerImpl(WriteJobController writeJobControllerImpl) {
+//    this.writeJobControllerImpl = writeJobControllerImpl;
+//  }
 }
