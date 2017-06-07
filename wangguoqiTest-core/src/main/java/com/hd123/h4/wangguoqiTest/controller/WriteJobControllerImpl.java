@@ -10,18 +10,9 @@ import com.hd123.h4.wangguoqiTest.service.WriteJobService;
  *
  */
 public class WriteJobControllerImpl implements WriteJobController {
-  
-  
+
   @Autowired
   private WriteJobService writeJobServiceImpl;
-
-//  public WriteJobService getWriteJobServiceImpl() {
-//    return writeJobServiceImpl;
-//  }
-//
-//  public void setWriteJobServiceImpl(WriteJobService writeJobServiceImpl) {
-//    this.writeJobServiceImpl = writeJobServiceImpl;
-//  }
 
   @Override
   public void insert() {
