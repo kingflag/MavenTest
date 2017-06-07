@@ -1,5 +1,7 @@
 package com.hd123.h4.wangguoqiTest.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.hd123.h4.wangguoqiTest.service.WriteJobService;
 
 /**
@@ -10,16 +12,16 @@ import com.hd123.h4.wangguoqiTest.service.WriteJobService;
 public class WriteJobControllerImpl implements WriteJobController {
   
   
-
+  @Autowired
   private WriteJobService writeJobServiceImpl;
 
-  public WriteJobService getWriteJobServiceImpl() {
-    return writeJobServiceImpl;
-  }
-
-  public void setWriteJobServiceImpl(WriteJobService writeJobServiceImpl) {
-    this.writeJobServiceImpl = writeJobServiceImpl;
-  }
+//  public WriteJobService getWriteJobServiceImpl() {
+//    return writeJobServiceImpl;
+//  }
+//
+//  public void setWriteJobServiceImpl(WriteJobService writeJobServiceImpl) {
+//    this.writeJobServiceImpl = writeJobServiceImpl;
+//  }
 
   @Override
   public void insert() {

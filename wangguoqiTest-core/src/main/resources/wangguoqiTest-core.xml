@@ -50,9 +50,11 @@
 <!-- 请求的bean -->
   <bean id="writeJobcontroller"
     class="com.hd123.h4.wangguoqiTest.controller.WriteJobControllerImpl">
-    <property name="WriteJobServiceImpl" ref="writeJobservice"></property>
+    <!-- <property name="WriteJobServiceImpl" ref="writeJobservice"></property> -->
   </bean>
   <bean id="writeJobservice" class="com.hd123.h4.wangguoqiTest.service.WriteJobServiceImpl"></bean>
+  
+  
 
 
 
