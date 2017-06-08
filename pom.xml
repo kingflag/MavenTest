@@ -23,8 +23,8 @@
     <module>wangguoqiTest-about</module>
     <module>wangguoqiTest-api</module>
     <module>wangguoqiTest-core</module>
-    <module>wangguoqiTest-doc</module>
     <module>wangguoqiTest-server</module>
+    <module>wangguoqiTest-doc</module>
   </modules>
 
   <properties>
