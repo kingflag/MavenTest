@@ -25,9 +25,11 @@ public class WriteJob implements ApplicationContextAware {
   public void run() throws Exception {
     System.out.println("WriteJob");
     String beanName = "writeJobcontroller";
+    System.out.println("取testbean:"+appCtx.containsBean("testbaen"));
     if (appCtx.containsBean(beanName)) {
       System.out.println("存在WriteJobcontroller");
       writeJobControllerImpl.insert();
+      
     } else {
       System.out.println("不存在此bean");
     }
