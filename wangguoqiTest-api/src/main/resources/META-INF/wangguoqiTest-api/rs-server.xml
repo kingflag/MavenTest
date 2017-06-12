@@ -20,7 +20,7 @@
   <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 
 
-  <bean id="testbaen" class="com.hd123.h4.wangguoqiTest.api.ReadJobApi"></bean>
+ <!--  <bean id="testbaen" class="com.hd123.h4.wangguoqiTest.api.ReadJobApi"></bean> -->
  
   <bean class="com.hd123.rumba.commons.rpc.service.ServiceFactory"
     factory-method="getDefault" lazy-init="false" />
@@ -60,7 +60,7 @@
       <!-- 业务 -->
       <!-- <bean class="com.hd123.h4.dts.wechat.core.rs.server.RSMchtServiceV2Impl"
         p:mchtService-ref="dts-wechat-rs.rs.mchtService" /> -->
-        
+      <bean id="testbaen" class="com.hd123.h4.wangguoqiTest.api.ReadJobApi"></bean>  
     </jaxrs:serviceBeans> 
 
     <jaxrs:providers>
