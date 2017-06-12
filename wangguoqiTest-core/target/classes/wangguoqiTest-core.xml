@@ -13,7 +13,7 @@
 
   <context:annotation-config />
   <import resource="classpath:wangguoqiTest-api.xml" />
-  
+
   <import resource="classpath:META-INF/wangguoqiTest-core/*.xml" />
 
   <tx:annotation-driven transaction-manager="mcdts-core.transactionManager" />
@@ -53,17 +53,27 @@
 
   <bean id="wangguoqiTest-core.writeJob" class="com.hd123.h4.wangguoqiTest.core.job.WriteJob"></bean>
 
+<!-- 写入数据控制器 -->
   <bean id="writeJobcontroller"
     class="com.hd123.h4.wangguoqiTest.controller.WriteJobControllerImpl"></bean>
 
+<!-- 写入数据service -->
   <bean id="writeJobservice" class="com.hd123.h4.wangguoqiTest.service.WriteJobServiceImpl"></bean>
-
+<!-- 写入数据dao -->
   <bean id="writeJobdao" class="com.hd123.h4.wangguoqiTest.dao.WriteJobDaoImpl">
     <property name="dataSource" ref="mytest.dataSource" />
   </bean>
 
 
-
+<!-- 读取数据控制器 -->
+  <bean id="readJobcontroller"
+    class="com.hd123.h4.wangguoqiTest.controller.ReadJobControllerImpl"></bean>
+<!-- 读取数据service -->    
+   <bean id="readJobservice" class="com.hd123.h4.wangguoqiTest.service.ReadJobServiceImpl"></bean>
+<!-- 读取数据dao -->
+  <bean id="readJobdao" class="com.hd123.h4.wangguoqiTest.dao.ReadJobDaoImpl">
+    <property name="dataSource" ref="mytest.dataSource" />
+  </bean>
 
 
 

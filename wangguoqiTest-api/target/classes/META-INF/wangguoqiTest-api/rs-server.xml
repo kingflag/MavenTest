@@ -20,7 +20,7 @@
   <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 
 
-  <bean id="testbaen" class="com.hd123.h4.wangguoqiTest.api.ReadJobApi"></bean>
+  <bean id="testbaen" class="com.hd123.h4.wangguoqiTest.api.ReadJobApiImpl"></bean>
 
   <bean class="com.hd123.rumba.commons.rpc.service.ServiceFactory"
     factory-method="getDefault" lazy-init="false" />
@@ -51,7 +51,7 @@
   </bean>
 
 
-  <jaxrs:server id="services" address="/">
+  <jaxrs:server id="services" address="/core">
 
     <jaxrs:serviceBeans>
       <!-- 业务 -->

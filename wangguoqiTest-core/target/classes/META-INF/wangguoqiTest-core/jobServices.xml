@@ -47,7 +47,7 @@
 						</bean>
 					</property>
 					<property name="cronExpression"
-						value="${mcdts-core.sendJob.run.cronExpression:0 0/1 * * * ?}" />
+						value="${mcdts-core.sendJob.run.cronExpression:0 0/5 * * * ?}" />
 				</bean>
 			</list>
 		</property>
