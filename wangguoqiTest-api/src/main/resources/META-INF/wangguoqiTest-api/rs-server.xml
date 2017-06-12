@@ -21,7 +21,7 @@
 
 
   <bean id="testbaen" class="com.hd123.h4.wangguoqiTest.api.ReadJobApi"></bean>
- 
+
   <bean class="com.hd123.rumba.commons.rpc.service.ServiceFactory"
     factory-method="getDefault" lazy-init="false" />
 
@@ -50,20 +50,20 @@
     </property>
   </bean>
 
-  
+
   <jaxrs:server id="services" address="/">
 
-   <jaxrs:serviceBeans>
+    <jaxrs:serviceBeans>
       <!-- 业务 -->
       <!-- <bean class="com.hd123.h4.dts.wechat.core.rs.server.RSMchtServiceImpl"
         p:mchtService-ref="dts-wechat-rs.rs.mchtService" /> -->
       <!-- 业务 -->
       <!-- <bean class="com.hd123.h4.dts.wechat.core.rs.server.RSMchtServiceV2Impl"
         p:mchtService-ref="dts-wechat-rs.rs.mchtService" /> -->
-      
-      <ref bean="testbaen"/>
-      
-    </jaxrs:serviceBeans> 
+
+      <ref bean="testbaen" />
+
+    </jaxrs:serviceBeans>
 
     <jaxrs:providers>
       <bean class="org.apache.cxf.jaxrs.provider.JAXBElementProvider" />
@@ -83,21 +83,24 @@
   </jaxrs:server>
 
 
-<!-- 
+  <!-- 
   <security:global-method-security
     secured-annotations="enabled">
   </security:global-method-security>
- -->
+  -->
+  
   <security:http auto-config="true">
     <security:intercept-url pattern="/**" access="ROLE_USER" />
     <security:http-basic />
   </security:http>
 
 
-<!--   <security:http auto-config="true">
+  <!--   
+  <security:http auto-config="true">
     <security:form-login login-page="/login.jsp" />
     <security:intercept-url pattern="/**" access="ROLE_USER" />
-  </security:http> -->
+  </security:http> 
+  -->
 
   <security:authentication-manager>
     <security:authentication-provider>

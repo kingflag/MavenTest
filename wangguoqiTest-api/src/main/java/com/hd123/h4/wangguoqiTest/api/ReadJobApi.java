@@ -18,15 +18,18 @@ public class ReadJobApi {
   @GET
   @Path("/apifunc")
   @Consumes("application/xml")
-  public void test(HttpServletRequest request, HttpServletResponse response) {
+  public String test() {
     System.out.println("APITEST");
     String resultString = "我要输出的数据";
 
     try {
-      response.setContentType("text/html;charset=UTF-8");
-      response.getWriter().write(resultString);
+      //response.setContentType("text/html;charset=UTF-8");
+      //response.getWriter().write(resultString);
+      System.out.println(resultString);
     } catch (Exception e) {
       e.printStackTrace();
+    }finally{
+      return "this is test data";
     }
   }
 
