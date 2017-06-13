@@ -1,26 +1,42 @@
 package com.hd123.h4.wangguoqiTest.api;
 
+import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class ReadJobApiImpl  implements ReadJobApi{
+import com.hd123.h4.wangguoqiTest.controller.IReadJobController;
+import com.hd123.h4.wangguoqiTest.domain.HdUserinfo;
+
+public class ReadJobApiImpl implements ReadJobApi {
+
+  protected static final Logger logger = LoggerFactory.getLogger(ReadJobApiImpl.class);
+
+  private IReadJobController readJobController;
 
   public ReadJobApiImpl() {
     System.out.println("ReadJobApi构造方法+++++++++++");
   }
 
+  public IReadJobController getreadJobController() {
+    return readJobController;
+  }
 
-  public String test() {
-    System.out.println("APITEST");
+  public void setreadJobController(IReadJobController readJobController) {
+    this.readJobController = readJobController;
+  }
+
+  @SuppressWarnings("finally")
+  public List<HdUserinfo> test() throws Exception {
     String resultString = "我要输出的数据";
 
     try {
-      //response.setContentType("text/html;charset=UTF-8");
-      //response.getWriter().write(resultString);
-      System.out.println(resultString);
+
+      logger.info(resultString);
     } catch (Exception e) {
       e.printStackTrace();
-    }finally{
-      return "this is test data";
+    } finally {
+      return readJobController.selectall();
     }
   }
 

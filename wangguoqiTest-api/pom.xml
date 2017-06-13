@@ -11,6 +11,14 @@
   <artifactId>wangguoqiTest-api</artifactId>
 
   <dependencies>
+
+    <dependency>
+      <groupId>com.hd123.h4.wangguoqiTest</groupId>
+      <artifactId>wangguoqiTest-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    
+    
     <dependency>
       <groupId>com.hd123.rumba.commons</groupId>
       <artifactId>rumba-commons-biz</artifactId>

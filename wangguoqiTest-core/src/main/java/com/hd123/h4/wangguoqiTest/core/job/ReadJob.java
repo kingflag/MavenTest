@@ -30,12 +30,12 @@ public class ReadJob implements ApplicationContextAware {
     System.out.println("ReadJob");
     logger.info(null, appCtx);
     String beanName = "readJobcontroller";
-    System.out.println("取testbean:" + appCtx.containsBean("testbaen"));
+    logger.info("取testbean:" + appCtx.containsBean("testbaen"));
     if (appCtx.containsBean(beanName)) {
-      System.out.println("存在ReadJobcontroller");
-      readJobControllerImpl.selectall();
+      logger.info("存在ReadJobcontroller");
+      //readJobControllerImpl.selectall();
     } else {
-      System.out.println("不存在此bean");
+      logger.info("不存在此bean");
     }
   }
 
