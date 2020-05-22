@@ -54,7 +54,7 @@
     <servlet-api.version>2.5</servlet-api.version>
     <javassist.version>3.6.0.GA</javassist.version>
 
-    <spring.version>3.2.9.RELEASE</spring.version>
+    <spring.version>5.2.6.RELEASE</spring.version>
     <spring-security.version>3.0.7.RELEASE</spring-security.version>
     <hd-swagger.version>1.1</hd-swagger.version>
     <jackson.version>1.9.11</jackson.version>
