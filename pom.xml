@@ -58,7 +58,7 @@
     <spring-security.version>3.0.7.RELEASE</spring-security.version>
     <hd-swagger.version>1.1</hd-swagger.version>
     <jackson.version>1.9.11</jackson.version>
-    <jackson2.version>2.1.1</jackson2.version>
+    <jackson2.version>2.11.0</jackson2.version>
 
     <quartz.version>1.6.1</quartz.version>
     <rs-api.version>2.0-m10</rs-api.version>
